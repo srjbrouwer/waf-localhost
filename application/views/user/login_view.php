@@ -1,7 +1,7 @@
 <div class='container'>
 	<?	 if(strlen(validation_errors())>0){ ?><div class="alert alert-dismissable alert-warning"><p><?php echo validation_errors(); ?></p></div><? } ?>
 	
-	<form class="form-horizontal" action="<?='/user/login/'.$redirect?>" method="post">
+	<form class="form-horizontal" action="<?='user/login/'.$redirect?>" method="post">
 	<?=form_hidden($this->security->get_csrf_token_name(), $this->security->get_csrf_hash());?> 
 	<fieldset>
 

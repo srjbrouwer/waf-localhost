@@ -279,7 +279,7 @@ $config['cookie_secure']	= FALSE;
 | COOKIE data is encountered
 |
 */
-$config['global_xss_filtering'] = true;
+$config['global_xss_filtering'] = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -341,7 +341,7 @@ $config['time_reference'] = 'UP1';
 | in your view files.  Options are TRUE or FALSE (boolean)
 |
 */
-$config['rewrite_short_tags'] = FALSE;
+$config['rewrite_short_tags'] = TRUE;
 
 
 /*

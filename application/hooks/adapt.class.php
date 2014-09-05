@@ -673,7 +673,7 @@ class Adapt{
                                     //--------------------[linkVar]----------
                                     if(isset($linkVar) && isset($option_arr[1])){
                                         $value = $this->crv->get_a_var_val($linkVar,$item['concept_name'],1,0);
-                                        $link = ((strlen($value['value'])) ? $value['value'] : "../".$item['concept_name']);
+                                        $link = ((strlen($value['value'])) ? $value['value'] : "".$item['concept_name']);
                                      }else{               
                                         $link = "../".$item['concept_name'];
                                     }
@@ -743,7 +743,7 @@ class Adapt{
 										function ajaxd_'.$div_index.'() { 
 											$.ajax({
 												type: "POST",
-												url: "../apage/'.$apage.'",
+												url: "apage/'.$apage.'",
 												data: {
 													term: "1"
 													},
@@ -770,7 +770,7 @@ class Adapt{
 										function ajaxd_'.$div_index.'() { 
 											$.ajax({
 												type: "POST",
-												url: "../apage/'.$apage.'",
+												url: "apage/'.$apage.'",
 												data: {
 													term: "1"
 													},
@@ -799,7 +799,7 @@ class Adapt{
                                                 function ajaxd_".$div_index."() { 
                                                 $.ajax({
                                                     type: \"POST\",
-                                                    url: \"../apage/".$apage."\",
+                                                    url: \"apage/".$apage."\",
                                                     data: {
                                                         term: \"1\"
                                                         },

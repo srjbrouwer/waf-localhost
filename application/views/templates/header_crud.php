@@ -82,6 +82,7 @@ function build_menu($menu,$position,$dropdown=true){
 <!DOCTYPE html>
 <html>
 <head>
+	<base href="http://<?=$_SERVER['HTTP_HOST']?>/waf/" target="_blank">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="language" content="nl" />
@@ -136,7 +137,7 @@ function build_menu($menu,$position,$dropdown=true){
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">Back to website</a>
+					<a class="navbar-brand" href="page/home">Back to website</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">

@@ -75,7 +75,7 @@ function build_menu($menu,$position){
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="http://localhost/waf/" target="_blank">
+	<base href="http://<?=$_SERVER['HTTP_HOST']?>/waf/" target="_blank">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="language" content="nl" />
