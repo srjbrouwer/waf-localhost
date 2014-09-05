@@ -85,10 +85,10 @@ function build_menu($menu,$position,$dropdown=true){
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="language" content="nl" />
-    	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="/css/admin.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.4.custom.css" media="screen"/>
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/admin.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css" media="screen"/>
     <?
 	//-----------------------------------[Extra Scripts]--------------------------------------
 	if(isset($css_extra)){
@@ -100,11 +100,11 @@ function build_menu($menu,$position,$dropdown=true){
     	}
 	?>
 	<title>Adaptation Layer</title>
-	<script src="/js/jquery-2.1.0.min.js"></script>
-    <script src="/js/jquery-ui-1.10.4.custom.js"></script>
-	<script src="/js/bootstrap.js"></script>
-	<script src="/plugins/typeahead/typeahead.bundle.js"></script>
-	<script src="/file/style"></script>
+	<script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="plugins/typeahead/typeahead.bundle.js"></script>
+	<script src="file/style"></script>
 	<?php 
 	if(isset($crud->css_files)){
 		foreach($crud->css_files as $file): 
