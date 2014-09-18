@@ -4,7 +4,6 @@ if(!isset($_COOKIE["PHPSESSID"]))
 {
   session_start();
 }
-$_SESSION['login'] = (!isset($_SESSION['login']) ? false : true);
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
