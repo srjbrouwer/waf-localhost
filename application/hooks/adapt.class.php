@@ -675,7 +675,7 @@ class Adapt{
                                         $value = $this->crv->get_a_var_val($linkVar,$item['concept_name'],1,0);
                                         $link = ((strlen($value['value'])) ? $value['value'] : "".$item['concept_name']);
                                      }else{               
-                                        $link = "../".$item['concept_name'];
+                                        $link = "/".$item['concept_name'];
                                     }
                                     //--------------------[linkNameVar]----------
                                     if(isset($linkNameVar)){

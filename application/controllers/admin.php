@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
    		//$this->output->enable_profiler();
 
 		$this->current_session = $this->session->userdata('user');
-		if($this->current_session['user_acl']<2){
+		if(!$_SESSION['login']){
 			redirect('user/login/admin', 'refresh');
 		}
 

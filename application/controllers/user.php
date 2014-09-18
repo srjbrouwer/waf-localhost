@@ -14,9 +14,9 @@ class User extends CI_Controller {
 		
 		//This method will have the credentials validation
 		if (isset($_POST['email'])){
-			$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('email', 'Email', 'trim|required');
 			if($this->form_validation->run() == true){
-				$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|sha1|callback_check_database');
+				$this->form_validation->set_rules('password', 'Password', 'trim|required|sha1|callback_check_database');
 			}
 		
 			if($this->form_validation->run() == false){
@@ -67,6 +67,7 @@ class User extends CI_Controller {
 			 		'user_lname' => $row->user_lname
 		   		);
 		   		$this->session->set_userdata('user', $sess_array);
+		   		$_SESSION['login']=true;
 		 	}
 			return true;
 	   }else{
