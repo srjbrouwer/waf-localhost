@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.20)
 # Database: waf
-# Generation Time: 2014-09-18 22:07:55 +0000
+# Generation Time: 2014-09-18 22:09:15 +0000
 # ************************************************************
 
 
@@ -88,7 +88,7 @@ LOCK TABLES `a_globals` WRITE;
 
 INSERT INTO `a_globals` (`id`, `startup`, `clean_auto`, `clean_expire`, `clean_last`, `clean_toglobal`, `log`, `benchmark`, `concept_create_auto`, `expressions`)
 VALUES
-	(1,'{done$order;init;1;/}\n{hook$order;init;0.1;/}\n{cms$order;init;0.2;/}\n{$visited;init;1;+1/}\n{$visit;set;1/}\n{intro$knowledge;init;0;/}\n{hook$knowledge;init;0;/}\n{cms$knowledge;init;0;/}',1,86400,'2014-09-18 23:59:59',0,0,0,0,0);
+	(1,'{done$order;init;1;/}\n{hook$order;init;0.1;/}\n{cms$order;init;0.2;/}\n{$visited;init;1;+1/}\n{$visit;set;1/}\n{intro$knowledge;init;0;/}\n{hook$knowledge;init;0;/}\n{cms$knowledge;init;0;/}',1,86400,'2014-09-18 23:59:59',0,0,0,1,0);
 
 /*!40000 ALTER TABLE `a_globals` ENABLE KEYS */;
 UNLOCK TABLES;
