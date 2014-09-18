@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
 			$crud->set_table('users');
 			$crud->set_subject('Users');
 			$crud->display_as('acl_id','Access Level');
-			$crud->set_relation('acl_id','acls','acl_label');
+			$crud->set_relation('acl_id','acls','acl_label', null, null, $default_value = 0);
  			$crud->change_field_type('user_password', 'password');
 			$crud->callback_edit_field('user_password',array($this,'set_password_field_empty'));
     		$crud->callback_add_field('user_password',array($this,'set_password_field_empty'));
@@ -46,7 +46,7 @@ class Admin extends CI_Controller {
 			$crud->set_subject('Page');
 			$crud->required_fields('page_name','acl_id','page_title');
 			$crud->columns('page_name','acl_id','page_title','page_text');
-			//$crud->display_as('acl_id','Access Level');
+			$crud->display_as('acl_id','Access Level');
 			$crud->set_relation('acl_id','acls','acl_label');
 			
 			$output = $crud->render();
