@@ -18,7 +18,6 @@ class User extends CI_Controller {
 			if($this->form_validation->run() == true){
 				$this->form_validation->set_rules('password', 'Password', 'trim|required|sha1|callback_check_database');
 			}
-		
 			if($this->form_validation->run() == false){
 				//Field validation failed.  User redirected to login page
 				$data['title'] = "Login"; // Capitalize the first letter
@@ -49,14 +48,16 @@ class User extends CI_Controller {
 			//$this->load->view('templates/footer', $data);	 	
 	}
 	function check_database($password){
+		
 	   //Field validation succeeded.  Validate against database
 	   $user_email = $this->input->post('email');
 
 	   //query the database
 	   $result = $this->users->login($user_email, $password);
-
+		
 	   if($result){
 			$sess_array = array();
+			
 			foreach($result as $row){
 		   		$sess_array = array(
 			 		'user_id' => $row->user_id,
@@ -66,9 +67,8 @@ class User extends CI_Controller {
 			 		'user_fname' => $row->user_fname,
 			 		'user_lname' => $row->user_lname
 		   		);
-		   		$this->session->set_userdata('user', $sess_array);
-		   		$_SESSION['login']=true;
 		 	}
+		 	$this->session->set_userdata('user', $sess_array);
 			return true;
 	   }else{
 			$this->form_validation->set_message('check_database', 'Invalid username or password');

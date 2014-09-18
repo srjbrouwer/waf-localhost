@@ -675,7 +675,7 @@ class Adapt{
                                         $value = $this->crv->get_a_var_val($linkVar,$item['concept_name'],1,0);
                                         $link = ((strlen($value['value'])) ? $value['value'] : "".$item['concept_name']);
                                      }else{               
-                                        $link = "/".$item['concept_name'];
+                                        $link = "".$item['concept_name'];
                                     }
                                     //--------------------[linkNameVar]----------
                                     if(isset($linkNameVar)){
@@ -704,11 +704,16 @@ class Adapt{
                 	$result = '';
                 	$error = '';
                 	try{
-                		$eval_code = html_entity_decode(html_entity_decode($matches[1][0],ENT_QUOTES));
-                		ob_start();
-                		eval('$result='.$eval_code.';');
-                		$error = ob_get_contents();
-						ob_end_clean();
+                		$this->a_globals['expressions'] = (isset($this->a_globals['expressions']) ? $this->a_globals['expressions'] : 0);
+                		if($this->a_globals['expressions']){
+							$eval_code = html_entity_decode(html_entity_decode($matches[1][0],ENT_QUOTES));
+							ob_start();
+							eval('$result='.$eval_code.';');
+							$error = ob_get_contents();
+							ob_end_clean();
+						}else{
+							$result = "[Expressions disabled in globals]";
+						}
                 	} catch (Exception $e) {
    						$this->crv->a_log_write("Expression: Caught exception: ".  $e->getMessage() . "\n");
     				}

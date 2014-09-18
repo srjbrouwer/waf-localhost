@@ -244,9 +244,9 @@ $config['encryption_key'] = 'AFVersleuteling20131215s%';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'af_session';
-$config['sess_expiration']		= 0;
-$config['sess_expire_on_close']	= FALSE;
+$config['sess_cookie_name']		= 'waf_session';
+$config['sess_expiration']		= 3600;
+$config['sess_expire_on_close']	= TRUE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= TRUE;
 $config['sess_table_name']		= 'ci_sessions';
@@ -266,7 +266,7 @@ $config['sess_time_to_update']	= 7200;
 |
 */
 $config['cookie_prefix']	= "";
-$config['cookie_domain']	= "localhost";
+$config['cookie_domain']	= "";
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
 
