@@ -1,0 +1,5 @@
+Installation problems with XAMPP:
+	1 Go to the control panel
+	2 Click on config behind apache
+	3 Edit the php.ini
+	4 Enable short_open_tag, by setting it to On
