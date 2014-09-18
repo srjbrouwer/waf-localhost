@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.20)
 # Database: waf
-# Generation Time: 2014-09-05 09:53:26 +0000
+# Generation Time: 2014-09-18 22:07:55 +0000
 # ************************************************************
 
 
@@ -79,15 +79,16 @@ CREATE TABLE `a_globals` (
   `log` int(1) NOT NULL DEFAULT '0',
   `benchmark` int(1) NOT NULL DEFAULT '0',
   `concept_create_auto` int(1) NOT NULL DEFAULT '0',
+  `expressions` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 LOCK TABLES `a_globals` WRITE;
 /*!40000 ALTER TABLE `a_globals` DISABLE KEYS */;
 
-INSERT INTO `a_globals` (`id`, `startup`, `clean_auto`, `clean_expire`, `clean_last`, `clean_toglobal`, `log`, `benchmark`, `concept_create_auto`)
+INSERT INTO `a_globals` (`id`, `startup`, `clean_auto`, `clean_expire`, `clean_last`, `clean_toglobal`, `log`, `benchmark`, `concept_create_auto`, `expressions`)
 VALUES
-	(1,'{done$order;init;1;/}\n{hook$order;init;0.1;/}\n{cms$order;init;0.2;/}\n{$visited;init;1;+1/}\n{$visit;set;1/}\n{intro$knowledge;init;0;/}\n{hook$knowledge;init;0;/}\n{cms$knowledge;init;0;/}',1,86400,'2014-09-05 11:50:22',0,0,0,0);
+	(1,'{done$order;init;1;/}\n{hook$order;init;0.1;/}\n{cms$order;init;0.2;/}\n{$visited;init;1;+1/}\n{$visit;set;1/}\n{intro$knowledge;init;0;/}\n{hook$knowledge;init;0;/}\n{cms$knowledge;init;0;/}',1,86400,'2014-09-18 23:59:59',0,0,0,0,0);
 
 /*!40000 ALTER TABLE `a_globals` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -199,8 +200,7 @@ VALUES
 	(57,'next',0,0,35,1.00,'2014-07-31 08:41:23'),
 	(58,'nextLink',0,0,35,1.00,'2014-07-31 08:41:28'),
 	(59,'link',0,0,29,1.00,'2014-07-31 10:56:13'),
-	(61,'linkName',0,0,29,1.00,'2014-07-31 13:31:26'),
-	(62,'lya',0,0,10,1.00,'2014-09-05 10:50:57');
+	(61,'linkName',0,0,29,1.00,'2014-07-31 13:31:26');
 
 /*!40000 ALTER TABLE `a_vars` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -252,49 +252,34 @@ VALUES
 	(2356,57,'0','Overview',1,'2014-07-31 08:42:50'),
 	(2357,58,'0','page/overview',1,'2014-09-05 11:06:27'),
 	(2516,61,'0','Hook Page',1,'2014-07-31 13:31:26'),
-	(2871,56,'eh69vrq4t2hjrpa2pa13qo8r83','1',1,'2014-09-05 09:34:33'),
-	(2872,52,'eh69vrq4t2hjrpa2pa13qo8r83','0.1',1,'2014-09-05 09:34:33'),
-	(2873,53,'eh69vrq4t2hjrpa2pa13qo8r83','0.2',1,'2014-09-05 09:34:33'),
-	(2874,5,'eh69vrq4t2hjrpa2pa13qo8r83','1',1,'2014-09-05 09:34:33'),
-	(2875,6,'eh69vrq4t2hjrpa2pa13qo8r83','1',1,'2014-09-05 09:34:33'),
-	(2876,29,'eh69vrq4t2hjrpa2pa13qo8r83','0',1,'2014-09-05 09:34:33'),
-	(2877,44,'eh69vrq4t2hjrpa2pa13qo8r83','0',1,'2014-09-05 09:34:33'),
-	(2878,56,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 10:25:55'),
-	(2879,52,'61ta4g5bhbp9qsne61u9fnne97','0.1',1,'2014-09-05 10:25:55'),
-	(2880,53,'61ta4g5bhbp9qsne61u9fnne97','0.2',1,'2014-09-05 10:25:55'),
-	(2881,5,'61ta4g5bhbp9qsne61u9fnne97','44',1,'2014-09-05 11:42:04'),
-	(2882,6,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 10:25:55'),
-	(2883,29,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:42:12'),
-	(2884,44,'61ta4g5bhbp9qsne61u9fnne97','0',1,'2014-09-05 11:34:13'),
-	(2885,15,'61ta4g5bhbp9qsne61u9fnne97','2',1,'2014-09-05 10:58:35'),
-	(2886,16,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 10:50:57'),
-	(2887,62,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 10:58:35'),
-	(2888,34,'61ta4g5bhbp9qsne61u9fnne97','8',1,'2014-09-05 11:42:06'),
-	(2889,35,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:02:34'),
-	(2890,13,'61ta4g5bhbp9qsne61u9fnne97','2',1,'2014-09-05 11:08:16'),
-	(2891,14,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:07:02'),
-	(2892,11,'61ta4g5bhbp9qsne61u9fnne97','2',1,'2014-09-05 11:09:30'),
-	(2893,12,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:09:07'),
-	(2894,40,'61ta4g5bhbp9qsne61u9fnne97','3',1,'2014-09-05 11:34:00'),
-	(2895,41,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:32:21'),
-	(2896,55,'61ta4g5bhbp9qsne61u9fnne97','0',1,'2014-09-05 11:34:13'),
-	(2897,24,'61ta4g5bhbp9qsne61u9fnne97','0',1,'2014-09-05 11:32:32'),
-	(2898,8,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:34:07'),
-	(2899,7,'61ta4g5bhbp9qsne61u9fnne97','1',1,'2014-09-05 11:34:07'),
-	(2900,56,'or8mfsthh4vtuhf7drrkcj9ls6','1',1,'2014-09-05 11:47:34'),
-	(2901,52,'or8mfsthh4vtuhf7drrkcj9ls6','0.1',1,'2014-09-05 11:47:34'),
-	(2902,53,'or8mfsthh4vtuhf7drrkcj9ls6','0.2',1,'2014-09-05 11:47:34'),
-	(2903,5,'or8mfsthh4vtuhf7drrkcj9ls6','1',1,'2014-09-05 11:47:34'),
-	(2904,6,'or8mfsthh4vtuhf7drrkcj9ls6','1',1,'2014-09-05 11:47:34'),
-	(2905,29,'or8mfsthh4vtuhf7drrkcj9ls6','0',1,'2014-09-05 11:47:34'),
-	(2906,44,'or8mfsthh4vtuhf7drrkcj9ls6','0',1,'2014-09-05 11:47:34'),
-	(2907,56,'7ahk86so4dnj1td48fen8foc70','1',1,'2014-09-05 11:48:30'),
-	(2908,52,'7ahk86so4dnj1td48fen8foc70','0.1',1,'2014-09-05 11:48:30'),
-	(2909,53,'7ahk86so4dnj1td48fen8foc70','0.2',1,'2014-09-05 11:48:30'),
-	(2910,5,'7ahk86so4dnj1td48fen8foc70','1',1,'2014-09-05 11:48:30'),
-	(2911,6,'7ahk86so4dnj1td48fen8foc70','1',1,'2014-09-05 11:48:30'),
-	(2912,29,'7ahk86so4dnj1td48fen8foc70','0',1,'2014-09-05 11:48:30'),
-	(2913,44,'7ahk86so4dnj1td48fen8foc70','0',1,'2014-09-05 11:48:30');
+	(2914,56,'57kebotb1ifvqre165f5th7j92','1',1,'2014-09-18 14:23:20'),
+	(2915,52,'57kebotb1ifvqre165f5th7j92','0.1',1,'2014-09-18 14:23:20'),
+	(2916,53,'57kebotb1ifvqre165f5th7j92','0.2',1,'2014-09-18 14:23:20'),
+	(2917,5,'57kebotb1ifvqre165f5th7j92','1',1,'2014-09-18 14:23:20'),
+	(2918,6,'57kebotb1ifvqre165f5th7j92','1',1,'2014-09-18 14:23:20'),
+	(2919,29,'57kebotb1ifvqre165f5th7j92','0',1,'2014-09-18 14:23:20'),
+	(2920,44,'57kebotb1ifvqre165f5th7j92','0',1,'2014-09-18 14:23:20'),
+	(2921,56,'dau2sg5omalbuo4n9fsco4q015','1',1,'2014-09-18 17:11:28'),
+	(2922,52,'dau2sg5omalbuo4n9fsco4q015','0.1',1,'2014-09-18 17:11:28'),
+	(2923,53,'dau2sg5omalbuo4n9fsco4q015','0.2',1,'2014-09-18 17:11:28'),
+	(2924,5,'dau2sg5omalbuo4n9fsco4q015','8',1,'2014-09-18 23:26:44'),
+	(2925,6,'dau2sg5omalbuo4n9fsco4q015','1',1,'2014-09-18 17:11:28'),
+	(2926,29,'dau2sg5omalbuo4n9fsco4q015','0',1,'2014-09-18 17:11:28'),
+	(2927,44,'dau2sg5omalbuo4n9fsco4q015','0',1,'2014-09-18 17:11:28'),
+	(2928,11,'dau2sg5omalbuo4n9fsco4q015','2',1,'2014-09-18 23:27:04'),
+	(2929,12,'dau2sg5omalbuo4n9fsco4q015','1',1,'2014-09-18 23:26:50'),
+	(2930,56,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:04'),
+	(2931,52,'8nv29k1d4lj72dkctb34clv7m0','0.1',1,'2014-09-18 23:35:04'),
+	(2932,53,'8nv29k1d4lj72dkctb34clv7m0','0.2',1,'2014-09-18 23:35:04'),
+	(2933,5,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:04'),
+	(2934,6,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:04'),
+	(2935,29,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:12'),
+	(2936,44,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:20'),
+	(2937,34,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:07'),
+	(2938,35,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:07'),
+	(2939,40,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:15'),
+	(2940,41,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:15'),
+	(2941,55,'8nv29k1d4lj72dkctb34clv7m0','1',1,'2014-09-18 23:35:20');
 
 /*!40000 ALTER TABLE `a_vars_values` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -306,15 +291,15 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `acls`;
 
 CREATE TABLE `acls` (
-  `id` int(11) NOT NULL,
+  `acl_id` int(11) NOT NULL,
   `acl_label` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`acl_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 LOCK TABLES `acls` WRITE;
 /*!40000 ALTER TABLE `acls` DISABLE KEYS */;
 
-INSERT INTO `acls` (`id`, `acl_label`)
+INSERT INTO `acls` (`acl_id`, `acl_label`)
 VALUES
 	(0,'Public'),
 	(1,'User'),
@@ -326,8 +311,6 @@ UNLOCK TABLES;
 
 # Dump of table ci_sessions
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `ci_sessions`;
 
 CREATE TABLE `ci_sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
@@ -344,43 +327,38 @@ LOCK TABLES `ci_sessions` WRITE;
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`)
 VALUES
-	('064a9fed6dd1c9a5a3b26f8700e99e27','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910418,''),
-	('394802a72e3aa5e5462336d526355568','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910418,''),
-	('e9d4d21484afc96b9b360b26fe9635f4','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910419,''),
-	('47c0437baf7bed24ef96be0534d66e15','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910419,''),
-	('6d417f5791775cdfe29fed0a5b44b998','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910419,''),
-	('e93579e46a85b7b14255bba88bbf6850','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910419,''),
-	('6737860c3808ca32569f24909cb17e27','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910421,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}'),
-	('8f419f616f88cc03c1f04d955a767155','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910421,''),
-	('9f9ef40aa426d23dcd7d6a43947038d5','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('51b064da06cacffcd83d614adf66e183','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('b90120526a940c5f8866ebcce8576440','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('1eb3599b5c6afd96a9e63f96d964d1b3','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('fba8d78275f59e51c5a186967c4e45d3','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('5f2956a03575eca9c555a9f78bbfdeea','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910422,''),
-	('37fc6b498b35e7f6d62c25fb9e8bcb15','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('94417576841594281ed483f42341d887','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('ae3e67d8ce06103bcfce024c9bb66722','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('3314a4c36b23847ea020662a9b405fbf','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('2f76ea1a23a1dd95bd733bfb32c8ceb3','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('f1e2eb85a68f78aea7a2663a4f66273d','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910454,''),
-	('3ec37c18b490ab464377eaa5a9f02d46','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('8a2a0fc992f17bb96ab4bd55ccac9079','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('a9c1b2242b265be0656e579b79e0dfb5','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('711fdfadc3e876996f4bde14c8bd8a6c','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('2fe481da919c0a8db1108b861e36f6c0','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('543976972403468d292f5203b0815c7d','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('d4339527b283629c35b18218c7c6ca61','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910456,''),
-	('765f7be28fdb4de0aeb8d3d3db7bd93e','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}'),
-	('b888ec9d60ed6a48c4be3d7b85810564','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('6513dd5fb7e4b63a5085404085e1aeba','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('b8f5c2d1cc892b293aa76baf94584d6e','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('a1ff91fa3225fef09aac81db498edb88','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('0009a13f90931323b34ba64a40594f2e','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('0ed31e9ef53bc44eec8a9bf35bf12beb','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('b01d573dbab4308840bfdf9a8c13ada4','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36',1409910459,''),
-	('9cd5655cc49bbfccc10bb7dc5f07b87a','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/7.0.6 Safari/537.78.2',1409910510,''),
-	('a71d038505ee41f85467e1bd9e5c8bfe','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/7.0.6 Safari/537.78.2',1409910510,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}');
+	('da6b3805cfc9231b3399b027e38e246e','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075943,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}'),
+	('3a855669c499609d32ab5e4b9fbcf4c4','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075200,''),
+	('1526b5dfb9a8c8d8420b788ff376d1c1','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075200,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}'),
+	('4cf8323c11040b3b3cc565bf08c8775b','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075097,''),
+	('a066676126b5b205e4e8bc437d478198','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075097,''),
+	('b7ca6ea10a0aeda95929d477b77d69cf','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075098,''),
+	('cdd3f02ce851d8b18d661342f62890b2','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075098,''),
+	('344101d1d9a5dbdf1bcc7b9b9a245286','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075098,''),
+	('ee8c6c981366ecd0e8c1f61fd0c0d127','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075098,''),
+	('181ad3e39e4782618b0a43b50616ebcb','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('b816c62e42096cd185efd9fbae33fce3','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('ed281cd9b9e65eeab6127cd189240ae9','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('5ae2a5bdf0e048e45bacc72ef85ee8ad','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('a2a6855f19f8b0b82f40b14812ad3ced','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('6effa17432598d1e160c26b4901afaf7','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075100,''),
+	('eabc29103bba3c25a3bd1348279518b8','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075108,''),
+	('8e9d68b6c891c9c662b4144c0bbc6617','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075108,''),
+	('066a0faa6537966e545aec999b12b685','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075108,''),
+	('0847339828c6f5e7fb3a216b2106a3d7','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075109,''),
+	('e0359a227554d0fb79c87463863df010','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075109,''),
+	('f2a0d671a3b441fa3e2cb470ecf94815','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075109,''),
+	('97267187494aa2182f0de6c00c1fe8ed','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075109,''),
+	('75332e082da629e0da4dc246f639e662','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075113,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}'),
+	('0dff61d82e3fbc2692a0605e6fdda788','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075113,''),
+	('775971e03bd1bd3cc7d063876b26982c','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075113,''),
+	('d17e5e0482b17baf685c02c4a85f175a','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075113,''),
+	('9ad568042674565f2e0d508a2dcf56e0','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075114,''),
+	('3c5a0b8d74fc6d1631f446df49a634c3','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075114,''),
+	('6bb92272a6517278a6b4a4c6e60dd4ec','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075114,''),
+	('96654d205dba085fa4f23a46ad4f2e1e','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075114,''),
+	('0a8df56530edd1c2f2b045145ce795d5','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075143,''),
+	('6de90e717867729f068189ca8f59cdde','::1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.3',1411075143,'a:2:{s:9:\"user_data\";s:0:\"\";s:4:\"user\";a:6:{s:7:\"user_id\";s:1:\"1\";s:11:\"user_active\";s:1:\"1\";s:10:\"user_email\";s:5:\"admin\";s:8:\"user_acl\";s:1:\"2\";s:10:\"user_fname\";s:5:\"Admin\";s:10:\"user_lname\";s:0:\"\";}}');
 
 /*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -592,7 +570,7 @@ DROP TABLE IF EXISTS `pages`;
 CREATE TABLE `pages` (
   `page_id` int(11) NOT NULL AUTO_INCREMENT,
   `page_name` varchar(255) NOT NULL DEFAULT '',
-  `acl_id` int(11) NOT NULL DEFAULT '0',
+  `acl_id` int(11) DEFAULT '0',
   `page_title` varchar(255) NOT NULL DEFAULT '',
   `page_text` text,
   PRIMARY KEY (`page_id`)
@@ -617,7 +595,7 @@ VALUES
 	(15,'anext',0,'anext','<a href=\"{adaptationlayer$order;top;min;conceptGlobalVar;0;nextLink/}\">{adaptationlayer$order;top;min;conceptGlobalVar;0;next/}</a>'),
 	(16,'cms',0,'CMS','<div id=\"adaptationlayerknowledge\">\n Adaptation layer knowledge level: {#processbar;1;0;1;adaptationlayer$knowledge/}</div>\n<p>\n {#read;acmsread;knowledgediv;5000/}{#read;anext;menu_1_0;5500/}{#read;anext2;next;5500/}{#read;aknowledgebar;adaptationlayerknowledge;5500/}</p>\n<div class=\"row\">\n <div class=\"col-sm-5 col-md-6\">\n  <div class=\"jumbotron\">\n   <h1>\n    Content Management Systems</h1>\n   This web-application is built on the codeIgniter framework. Within the codeIngiter framework, different controllers, models and views are written for content management purposes. The framework is connected with a special adaptation layer. This conneciton is a so called `hook`. This hook processes all page content before being sent to the client (you).</div>\n  <ul class=\"pager\">\n   <li class=\"next\" id=\"next\">\n    &nbsp;</li>\n  </ul>\n </div>\n <div class=\"col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0\">\n  <div class=\"panel panel-default\">\n   <div class=\"panel-heading\">\n    <h3 class=\"panel-title\">\n     CMS knowledge level</h3>\n   </div>\n   <div class=\"panel-body\" id=\"knowledgediv\">\n    Your current level: {#processbar;1;0;1;cms$knowledge/}</div>\n  </div>\n </div>\n</div>\n<p>\n &nbsp;</p>\n'),
 	(18,'aknowledgebar',0,'aknowledgebar','<div id=\"adaptationlayerknowledge\">\n Adaptation layer knowledge level: {#processbar;1;0;1;adaptationlayer$knowledge/}</div>\n'),
-	(21,'test',0,'test','<div>\n {1;0;page/home$linkName;init;0;+1/}</div>\n<div>\n global set test {1;0;page/home$linkName;set;&#39;Home Page Link&#39; / }</div>\n<div>\n {1;0;page/hook$linkName;set;&#39;Hook Page&#39;/}</div>\n<div>\n home link global: {1;0;page/home$link/} , linkName:&nbsp;{1;0;page/home$linkName/}</div>\n<div id=\"test\">\n test div</div>\n<p>\n <h> Test{#interval;atest;test;5000/}</h></p>\n<p>\n {$lya;init;0;+1/}</p>\n<p>\n {$lya;&gt;2}<strong>Blabla</strong> Polo blabla {/$lya}</p>\n<h>\n<p>\n sskdfjsdkfjslkafj, the home page is visited {page/home$visited/} times.</p>\n<p>\n {#fade;in;2000}<img alt=\"\" src=\"http://doowansnewsandevents.files.wordpress.com/2013/05/one-size-fits-all-1.jpg\" />{/#fade}</p>\n</h>'),
+	(24,'commands',0,'Commands','<p>\n	{$visited;&gt;2}<strong>There is no need to refresh if you&nbsp;</strong><strong>keep this page active :p</strong>{/$visited}</p>\n<p>\n	Hereby an overview of the commands:</p>\n<p class=\"p1\">\n	<span class=\"s1\"><b>Computation options &amp; global</b></span></p>\n<ol class=\"ol1\">\n	<li class=\"li1\">\n		<span class=\"s1\">Options</span>\n		<ul class=\"ul1\">\n			<li class=\"li1\">\n				<span class=\"s1\">0 = normal calculation including parent-child and special relationships</span></li>\n			<li class=\"li1\">\n				<span class=\"s1\">1 = same as 0 only the response value is a weighted average determined by the weights of all children</span></li>\n			<li class=\"li1\">\n				<span class=\"s1\">2 = same as 0 only plus the global value of the same variable of the same concept</span></li>\n			<li class=\"li1\">\n				<span class=\"s1\">3 = same as 1 only including the global value in the weighted average</span></li>\n		</ul>\n	</li>\n	<li class=\"li1\">\n		<span class=\"s1\">Global</span>\n		<ul class=\"ul1\">\n			<li class=\"li1\">\n				<span class=\"s1\">0 = use user variable</span></li>\n			<li class=\"li1\">\n				<span class=\"s1\">1 = use global variable</span></li>\n		</ul>\n	</li>\n	<li class=\"li1\">\n		<span class=\"s1\">Format = global&nbsp;<b>;</b>&nbsp;option</span></li>\n</ol>\n<p class=\"p1\">\n	<span class=\"s1\"><b>Concept and variable notation (for now called: ConceptVariable)</b></span></p>\n<ol class=\"ol1\">\n	<li class=\"li1\">\n		<span class=\"s2\">global<b>&nbsp;</b>;<b>&nbsp;</b>option ;</span><span class=\"s1\"><b>&nbsp;concept $ variable</b>&nbsp;(the underlined part is not mandatory)</span></li>\n	<li class=\"li1\">\n		<span class=\"s1\"><b>$variable</b>&nbsp;(variable of current concept)</span></li>\n</ol>\n<p class=\"p2\">\n	&nbsp;</p>\n<p class=\"p1\">\n	<span class=\"s1\"><b>Echo</b></span></p>\n<ol class=\"ol1\">\n	<li class=\"li1\">\n		<span class=\"s1\">{<b>ConceptVariable</b>/}</span></li>\n</ol>\n<p class=\"p1\">\n	<span class=\"s1\"><b>Init</b></span></p>\n<ol class=\"ol1\">\n	<li class=\"li1\">\n		<span class=\"s1\">{<b>ConceptVariable</b>;init;[start];</span><span class=\"s2\">[incrementoperator][incrementvalue]</span><span class=\"s1\">/}</span>\n		<ul class=\"ul1\">\n			<li class=\"li1\">\n				<span class=\"s1\">{<b>ConceptVariable</b>;init;0;+1/}</span></li>\n			<li class=\"li1\">\n				<span class=\"s1\">{<b>ConceptVariable</b>;init;0/}</span></li>\n		</ul>\n	</li>\n</ol>\n<p class=\"p1\">\n	<span class=\"s1\"><b>If</b></span></p>\n<ol class=\"ol1\">\n	<li class=\"li1\">\n		<span class=\"s1\">{<b>ConceptVariable</b>;[comparison]} &hellip;.. {/<b>variable</b>}</span></li>\n</ol>\n'),
 	(22,'atest',0,'atest','<p>\n {$visited;init;0;+1/}</p>\n<p>\n content after 5 seconds -&gt; dit is de {$visited/} keer</p>\n'),
 	(23,'areset',0,'areset',' {hook$knowledge;set;0/}{cms$knowledge;set;0/}{intro$knowledge;set;0/}{done$knowledge;set;0/}<a href=\'page/home\'>Reset done! Reload page</a>\n');
 
